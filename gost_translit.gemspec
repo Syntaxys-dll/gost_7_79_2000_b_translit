@@ -7,9 +7,8 @@ Gem::Specification.new do |s|
   s.summary = 'GOST 7.79-2000 type b transliteration'
   s.homepage = 'https://github.com/Syntaxys-dll/gost_7_79_2000_b_translit'
   s.license = 'MIT'
-
+  s.files = Dir.glob("{lib,spec}/**/**")
   s.require_paths = ['lib']
-  s.add_development_dependency 'bundler'
-  s.add_development_dependency 'rake'
-  s.add_development_dependency 'rspec'
+
+  s.add_development_dependency 'rspec', '~> 2.7', '>= 2.7.0'
 end
