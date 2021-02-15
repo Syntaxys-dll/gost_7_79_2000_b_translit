@@ -4,7 +4,7 @@ Transliterate between cyrillic -> latin and vice versa with GOST 7.79-2000 type 
 
 ### Install ###
 
-```gem install translit```
+```gem install gost_translit```
 
 ### Usage ###
 
