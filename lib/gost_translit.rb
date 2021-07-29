@@ -79,7 +79,7 @@ module GostTranslit
 
       words.map! do |word|
         translit_word = word.downcase
-        LATIN_REPLACING_MAPPING.each { |k,v| translit_word.gsub!(k, v) }
+        LATIN_REPLACING_MAPPING.each { |k, v| translit_word.gsub!(k, v) }
 
         translit_word = translit_word.split('')
                                      .map! { |l| LATIN_MAPPING[l] || l }
