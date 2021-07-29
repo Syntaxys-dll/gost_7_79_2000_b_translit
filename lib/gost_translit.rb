@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
+# Main module
 module GostTranslit
-  UPPER_REGEXP = /[[:upper:]]/
-  LOWER_REGEXP = /[[:lower:]]/
+  UPPER_REGEXP = /[[:upper:]]/.freeze
+  LOWER_REGEXP = /[[:lower:]]/.freeze
 
   RU_MAPPING = {
     'а': 'a',
@@ -38,25 +39,25 @@ module GostTranslit
     'э': 'e`',
     'ю': 'yu',
     'я': 'ya'
-  }
+  }.freeze
 
   LATIN_REPLACING_MAPPING = {
     'shh' => 'щ',
-    'sh'  => 'ш',
-    'yu'  => 'ю',
-    'ya'  => 'я',
-    '``'  => 'ъ',
-    'y`'  => 'ы',
-    'e`'  => 'э',
-    'ch'  => 'ч',
-    'cz'  => 'ц',
-    'zh'  => 'ж',
-    'yo'  => 'ё'
-  }
+    'sh' => 'ш',
+    'yu' => 'ю',
+    'ya' => 'я',
+    '``' => 'ъ',
+    'y`' => 'ы',
+    'e`' => 'э',
+    'ch' => 'ч',
+    'cz' => 'ц',
+    'zh' => 'ж',
+    'yo' => 'ё'
+  }.freeze
 
   LATIN_MAPPING = Hash[
-    GostTranslit::RU_MAPPING.invert.collect { |k, v| [ k.to_s, v.to_s ] }
-  ].merge!('c' => 'ц')
+    GostTranslit::RU_MAPPING.invert.collect { |k, v| [k.to_s, v.to_s] }
+  ].merge!('c' => 'ц').freeze
 
   class << self
     def to_latin(string)
@@ -65,7 +66,7 @@ module GostTranslit
       words.map! do |word|
         translit_word = word.downcase
                             .split('')
-                            .map { |l| RU_MAPPING[l.to_sym] || l}
+                            .map { |l| RU_MAPPING[l.to_sym] || l }
                             .join
 
         translit_word.gsub!(/(cz)(?=[i|e|j|y])/, 'c')

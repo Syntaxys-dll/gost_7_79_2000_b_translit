@@ -117,13 +117,13 @@ RSpec.describe GostTranslit do
     end
   end
 
-  describe '.translit' do
+  describe '.convert' do
     it 'translit latin text to cyrillic' do
-      expect(subject.translit(latin_text)).to eq(cyrillic_text)
+      expect(subject.convert(latin_text)).to eq(cyrillic_text)
     end
 
     it 'translit cyrillic text to latin' do
-      expect(subject.translit(cyrillic_text)).to eq(latin_text)
+      expect(subject.convert(cyrillic_text)).to eq(latin_text)
     end
   end
 end
