@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'gost_translit'
-  s.version = '0.0.2'
+  s.version = '0.0.3'
   s.authors = ['Viacheslav Soldatov']
   s.email = ['syntaxys0dll@gmail.com']
 

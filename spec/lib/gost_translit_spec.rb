@@ -86,6 +86,10 @@ RSpec.describe GostTranslit do
       it 'changed to "ц" from "cz"' do
         expect(subject.to_cyrillic('czaplya')).to eq('цапля')
       end
+
+      it 'changed to "к" from "q"' do
+        expect(subject.to_cyrillic('Qatar')).to eq('Катар')
+      end
     end
   end
 

@@ -52,7 +52,8 @@ module GostTranslit
     'ch' => 'ч',
     'cz' => 'ц',
     'zh' => 'ж',
-    'yo' => 'ё'
+    'yo' => 'ё',
+    'q'  => 'к'
   }.freeze
 
   LATIN_MAPPING = Hash[
